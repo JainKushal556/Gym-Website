@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XYZ GYM — Luxury Fitness Club & Wellness Center</title>
+  <meta name="description" content="XYZ Gym is a luxury fitness club offering world-class strength equipment, certified master trainers, recovery spa, and premium sports nutrition." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== 1. FLOATING CENTERED CAPSULE NAVBAR ==================== -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#" class="brand-logo">XYZ<span>.</span>GYM</a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#memberships" class="nav-link">Memberships</a></li>
+        <li><a href="#facilities" class="nav-link">Facilities</a></li>
+        <li><a href="#trainers" class="nav-link">Trainers</a></li>
+        <li><a href="#nutrition" class="nav-link">Nutrition Store</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn" id="cart-toggle-btn" aria-label="View Cart">
+          🛒 <span class="cart-badge" id="cart-badge-count">0</span>
+        </button>
+        <a href="#book-visit" class="btn btn-primary btn-sm">JOIN NOW</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-media">
+      <img src="images/hero-bg.jpg" alt="XYZ Gym Luxury Athletic Facility" />
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">PREMIUM ATHLETIC CLUB</div>
+        <h1 class="hero-title">TRAIN HARD.<br/><span class="text-gold">LIVE BETTER.</span></h1>
+        <p class="hero-subtitle">
+          Premium fitness, expert coaching, and everything you need to build a stronger, healthier version of yourself in an elite environment.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#memberships" class="btn btn-primary">VIEW MEMBERSHIPS</a>
+          <a href="#book-visit" class="btn btn-secondary">BOOK A FREE VISIT</a>
+        </div>
+
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <h4>500+</h4>
+            <p>Active Members</p>
+          </div>
+          <div class="trust-item">
+            <h4>15+</h4>
+            <p>Master Trainers</p>
+          </div>
+          <div class="trust-item">
+            <h4>4.9 ★</h4>
+            <p>Member Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. MEMBERSHIP SECTION ==================== -->
+  <section class="memberships section-padding" id="memberships">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">MEMBERSHIP PACKAGES</span>
+        <h2 class="section-title">Invest In Your Fitness</h2>
+        <p class="section-subtitle">
+          Transparent pricing with no hidden registration fees. Flexible packages designed for your long-term transformation.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- ESSENTIAL -->
+        <div class="pricing-card reveal">
+          <div class="plan-header">
+            <h3 class="plan-name">ESSENTIAL</h3>
+            <span class="plan-duration">1 Month Membership</span>
+          </div>
+          <div class="plan-price-box">
+            <span class="plan-currency">₹</span>
+            <span class="plan-price">2,499</span>
+          </div>
+          <ul class="plan-features">
+            <li>Full Gym Floor & Strength Access</li>
+            <li>Cardio & Endurance Suite</li>
+            <li>Locker Room & Shower Access</li>
+            <li>Complimentary Fitness Assessment</li>
+            <li>Standard Gym Hours Access</li>
+          </ul>
+          <a href="#book-visit" class="btn btn-secondary btn-full">BUY NOW</a>
+        </div>
+
+        <!-- PERFORMANCE (MOST POPULAR) -->
+        <div class="pricing-card popular reveal-scale">
+          <div class="popular-badge">MOST POPULAR</div>
+          <div class="plan-header">
+            <h3 class="plan-name">PERFORMANCE</h3>
+            <span class="plan-duration">3 Months Membership</span>
+          </div>
+          <div class="plan-price-box">
+            <span class="plan-currency">₹</span>
+            <span class="plan-price">5,999</span>
+          </div>
+          <ul class="plan-features">
+            <li>Everything in Essential</li>
+            <li>2x / Week Personal Trainer Support</li>
+            <li>Infrared Sauna & Steam Room Access</li>
+            <li>Customized Nutrition Protocol</li>
+            <li>Unlimited Group Fitness Classes</li>
+            <li>24/7 Priority Access Pass</li>
+          </ul>
+          <a href="#book-visit" class="btn btn-primary btn-full">BUY NOW</a>
+        </div>
+
+        <!-- ELITE -->
+        <div class="pricing-card reveal">
+          <div class="plan-header">
+            <h3 class="plan-name">ELITE</h3>
+            <span class="plan-duration">12 Months Membership</span>
+          </div>
+          <div class="plan-price-box">
+            <span class="plan-currency">₹</span>
+            <span class="plan-price">18,999</span>
+          </div>
+          <ul class="plan-features">
+            <li>Everything in Performance</li>
+            <li>Unlimited Dedicated Personal Coaching</li>
+            <li>VIP Locker & Private Towel Service</li>
+            <li>Free Quarterly Nutrition & Supplement Pack</li>
+            <li>Monthly InBody Composition Scanning</li>
+            <li>2 Guest Passes Per Month</li>
+          </ul>
+          <a href="#book-visit" class="btn btn-secondary btn-full">BUY NOW</a>
+        </div>
+      </div>
+
+      <div class="memberships-footer-cta reveal">
+        <a href="#contact" class="btn btn-secondary">VIEW ALL MEMBERSHIP DETAILS &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. WHY CHOOSE US ==================== -->
+  <section class="why-us section-padding" id="why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">WHY CHOOSE XYZ GYM</span>
+        <h2 class="section-title">Built For Results</h2>
+        <p class="section-subtitle">
+          We combine cutting-edge sports science, world-class equipment, and a refined environment tailored for continuous progress.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🏋️</div>
+          <h3 class="feature-title">Premium Equipment</h3>
+          <p class="feature-desc">Engineered machinery from Technogym, Rogue Fitness, and Hammer Strength for smooth biomechanics.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">👨‍🏫</div>
+          <h3 class="feature-title">Certified Master Coaches</h3>
+          <p class="feature-desc">Internationally certified CSCS & ACE trainers with proven expertise in biomechanics and fat loss.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🧖</div>
+          <h3 class="feature-title">Spa & Recovery Lounge</h3>
+          <p class="feature-desc">Rejuvenate with cedar wood infrared saunas, steam rooms, and dedicated hydrotherapy recovery zone.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🥗</div>
+          <h3 class="feature-title">Personalized Nutrition</h3>
+          <p class="feature-desc">Science-backed meal strategies and supplement protocols structured specifically to your metabolic targets.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🧼</div>
+          <h3 class="feature-title">Spotless Hygiene</h3>
+          <p class="feature-desc">Hospital-grade HEPA air filtration and continuous disinfection for a safe, immaculate environment.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔑</div>
+          <h3 class="feature-title">Flexible 24/7 Access</h3>
+          <p class="feature-desc">Keycard entry system allowing seamless access whenever your schedule demands, day or night.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. FACILITIES ==================== -->
+  <section class="facilities section-padding" id="facilities">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">OUR FACILITIES</span>
+        <h2 class="section-title">World-Class Environment</h2>
+        <p class="section-subtitle">
+          Explore our thoughtfully designed workout zones engineered for peak physical performance and comfort.
+        </p>
+      </div>
+
+      <div class="facilities-grid">
+        <div class="facility-card reveal-left">
+          <img src="images/hero-bg.jpg" alt="Strength & Free Weights Zone" />
+          <div class="facility-overlay">
+            <h3 class="facility-title">Strength & Power Zone</h3>
+            <p class="facility-desc">Olympic lifting platforms, competition power racks, and precision dumbbells up to 60kg.</p>
+          </div>
+        </div>
+
+        <div class="facility-card reveal-right">
+          <img src="images/facility-cardio.jpg" alt="Cardio & Endurance Suite" />
+          <div class="facility-overlay">
+            <h3 class="facility-title">Cardio & Endurance Suite</h3>
+            <p class="facility-desc">Interactive Technogym treadmills, stairmasters, and assault bikes integrated with digital telemetry.</p>
+          </div>
+        </div>
+
+        <div class="facility-card reveal-left">
+          <img src="images/training-zone.jpg" alt="Functional & Combat Zone" />
+          <div class="facility-overlay">
+            <h3 class="facility-title">Functional & Combat Ring</h3>
+            <p class="facility-desc">Turf sprint track, heavy bags, kettlebell racks, and battle ropes for high-intensity athletic conditioning.</p>
+          </div>
+        </div>
+
+        <div class="facility-card reveal-right">
+          <img src="images/facility-locker.jpg" alt="Recovery Spa & Sauna" />
+          <div class="facility-overlay">
+            <h3 class="facility-title">Executive Spa & Recovery Suite</h3>
+            <p class="facility-desc">Finnish cedar sauna, eucalyptus steam bath, rain showers, and secure vanity locker amenities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. TRAINERS ==================== -->
+  <section class="trainers section-padding" id="trainers">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">EXPERT COACHING</span>
+        <h2 class="section-title">Meet Your Master Trainers</h2>
+        <p class="section-subtitle">
+          Our certified coaches bring years of professional experience to guide your body transformation safely and effectively.
+        </p>
+      </div>
+
+      <div class="trainers-grid">
+        <div class="trainer-card reveal">
+          <div class="trainer-img-wrapper">
+            <img src="images/trainer1.jpg" alt="Rahul Sharma - Head Coach" />
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">RAHUL SHARMA</h3>
+            <p class="trainer-role">Head Strength & Conditioning Coach</p>
+            <div class="trainer-meta">
+              <span>CSCS® Certified</span>
+              <span>8+ Years Exp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trainer-card reveal">
+          <div class="trainer-img-wrapper">
+            <img src="images/trainer2.jpg" alt="Priya Patel - Master Coach" />
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">PRIYA PATEL</h3>
+            <p class="trainer-role">Master Functional & Mobility Specialist</p>
+            <div class="trainer-meta">
+              <span>NASM-CPT</span>
+              <span>6+ Years Exp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trainer-card reveal">
+          <div class="trainer-img-wrapper">
+            <img src="images/trainer3.jpg" alt="Marcus Vance - Performance Coach" />
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">MARCUS VANCE</h3>
+            <p class="trainer-role">Senior Body Recomposition Coach</p>
+            <div class="trainer-meta">
+              <span>EXOS Certified</span>
+              <span>10+ Years Exp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. TRANSFORMATIONS / RESULTS ==================== -->
+  <section class="results section-padding" id="results">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">REAL RESULTS</span>
+        <h2 class="section-title">Member Transformations</h2>
+        <p class="section-subtitle">
+          Consistent hard work combined with expert coaching delivers measurable fitness breakthroughs.
+        </p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card reveal-left">
+          <div class="result-header">
+            <h3 class="result-member-name">Vikram Singh</h3>
+            <span class="result-badge">-14 kg in 16 Weeks</span>
+          </div>
+          <p class="result-quote">
+            "The personal coaching and structured nutrition plan at XYZ Gym completely transformed my energy levels and strength. The environment keeps me accountable every single day."
+          </p>
+        </div>
+
+        <div class="result-card reveal-right">
+          <div class="result-header">
+            <h3 class="result-member-name">Ananya Roy</h3>
+            <span class="result-badge">+5 kg Muscle in 12 Weeks</span>
+          </div>
+          <p class="result-quote">
+            "Top-tier equipment and clean, luxury facilities. Working with certified trainers helped me gain functional muscle safely while improving my overall posture."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. TESTIMONIALS / SOCIAL PROOF ==================== -->
+  <section class="testimonials section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">MEMBER FEEDBACK</span>
+        <h2 class="section-title">What Our Community Says</h2>
+        <div class="google-trust-badge" style="margin-top: 1rem;">
+          <span>⭐ 4.9 / 5.0 Rating based on 240+ Verified Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Hands down the best gym in the city. Cleanliness is 10/10, machinery is immaculate, and the crowd is focused. Highly recommend the Performance package!"
+          </p>
+          <div class="testimonial-author">— Rohan Mehta (Member since 2023)</div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "The trainer quality here is phenomenal. No nonsense, pure science-backed coaching. The sauna after leg day is my favorite perk."
+          </p>
+          <div class="testimonial-author">— Sneha Kapoor (Member since 2024)</div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Super clean facilities, responsive staff, and premium supplements in their nutrition store. Truly a 5-star fitness club experience."
+          </p>
+          <div class="testimonial-author">— Devansh Verma (Member since 2022)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 9. NUTRITION STORE ==================== -->
+  <section class="nutrition-store section-padding" id="nutrition">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">XYZ PERFORMANCE NUTRITION</span>
+        <h2 class="section-title">Fuel Your Workouts</h2>
+        <p class="section-subtitle">
+          Lab-tested, premium sports supplements formulated to support your muscle recovery and daily energy.
+        </p>
+      </div>
+
+      <div class="store-tabs reveal">
+        <button class="store-tab active" data-category="all">All Products</button>
+        <button class="store-tab" data-category="protein">Protein</button>
+        <button class="store-tab" data-category="creatine">Creatine</button>
+        <button class="store-tab" data-category="preworkout">Pre-Workout</button>
+        <button class="store-tab" data-category="vitamins">Vitamins</button>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card reveal" data-category="protein">
+          <div class="product-image-container">
+            <img src="images/nutrition.jpg" alt="ISO-Whey Gold Protein" />
+          </div>
+          <div class="product-brand">XYZ PERFORMANCE</div>
+          <h3 class="product-name">ISO-Whey Gold Isolate</h3>
+          <span class="product-weight">2.0 kg (4.4 lbs) · Chocolate</span>
+          <div class="product-price-row">
+            <span class="product-price">₹4,499</span>
+            <span class="product-old-price">₹5,499</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-secondary btn-sm add-to-cart-btn" data-name="ISO-Whey Gold Isolate" data-price="4499">Add to Cart</button>
+            <button class="btn btn-primary btn-sm buy-now-btn" data-name="ISO-Whey Gold Isolate" data-price="4499">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card reveal" data-category="creatine">
+          <div class="product-image-container">
+            <img src="images/nutrition.jpg" alt="Micro Pure Creatine" />
+          </div>
+          <div class="product-brand">XYZ PERFORMANCE</div>
+          <h3 class="product-name">Micro Pure Creatine</h3>
+          <span class="product-weight">300g · Unflavored</span>
+          <div class="product-price-row">
+            <span class="product-price">₹1,199</span>
+            <span class="product-old-price">₹1,499</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-secondary btn-sm add-to-cart-btn" data-name="Micro Pure Creatine" data-price="1199">Add to Cart</button>
+            <button class="btn btn-primary btn-sm buy-now-btn" data-name="Micro Pure Creatine" data-price="1199">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card reveal" data-category="preworkout">
+          <div class="product-image-container">
+            <img src="images/nutrition.jpg" alt="Pre-Workout Surge" />
+          </div>
+          <div class="product-brand">XYZ PERFORMANCE</div>
+          <h3 class="product-name">Pre-Workout Surge Matrix</h3>
+          <span class="product-weight">400g · Fruit Punch</span>
+          <div class="product-price-row">
+            <span class="product-price">₹1,999</span>
+            <span class="product-old-price">₹2,499</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-secondary btn-sm add-to-cart-btn" data-name="Pre-Workout Surge Matrix" data-price="1999">Add to Cart</button>
+            <button class="btn btn-primary btn-sm buy-now-btn" data-name="Pre-Workout Surge Matrix" data-price="1999">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card reveal" data-category="vitamins">
+          <div class="product-image-container">
+            <img src="images/nutrition.jpg" alt="Vital Multi-Nutrient" />
+          </div>
+          <div class="product-brand">XYZ PERFORMANCE</div>
+          <h3 class="product-name">Vital Multi-Nutrient Formula</h3>
+          <span class="product-weight">90 Capsules</span>
+          <div class="product-price-row">
+            <span class="product-price">₹899</span>
+            <span class="product-old-price">₹1,199</span>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-secondary btn-sm add-to-cart-btn" data-name="Vital Multi-Nutrient Formula" data-price="899">Add to Cart</button>
+            <button class="btn btn-primary btn-sm buy-now-btn" data-name="Vital Multi-Nutrient Formula" data-price="899">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 10. GYM TIMINGS ==================== -->
+  <section class="timings section-padding" id="timings">
+    <div class="container">
+      <div class="timings-container reveal-scale">
+        <div style="text-align: center;">
+          <div class="live-status-pill">
+            <span class="pulse-dot"></span> OPEN NOW • Closes at 11:00 PM
+          </div>
+          <h2 class="section-title">Hours of Operation</h2>
+        </div>
+
+        <div class="timings-grid">
+          <div class="timing-item">
+            <div class="timing-day">Monday – Friday</div>
+            <div class="timing-hours">5:30 AM – 11:00 PM</div>
+          </div>
+
+          <div class="timing-item">
+            <div class="timing-day">Saturday</div>
+            <div class="timing-hours">6:00 AM – 10:00 PM</div>
+          </div>
+
+          <div class="timing-item">
+            <div class="timing-day">Sunday</div>
+            <div class="timing-hours">7:00 AM – 2:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 11. LOCATION / CONTACT ==================== -->
+  <section class="contact section-padding" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info-card reveal-left">
+          <span class="section-tag">FIND US</span>
+          <h2 class="section-title" style="margin-bottom: 2rem;">Visit XYZ Gym</h2>
+
+          <div class="contact-detail-group">
+            <div class="contact-detail-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-text">
+                <h5>Location Address</h5>
+                <p>42 Luxury Tower, Fitness District, Golf Course Road, City</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-text">
+                <h5>Phone Contact</h5>
+                <p>+91 98765 43210 / +91 98765 43211</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-text">
+                <h5>Email Inquiry</h5>
+                <p>contact@xyzgym.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a href="tel:+919876543210" class="btn btn-primary">CALL NOW</a>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="btn btn-secondary">WHATSAPP</a>
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-secondary">GET DIRECTIONS</a>
+          </div>
+        </div>
+
+        <div class="map-placeholder reveal-right">
+          <iframe 
+            title="XYZ Gym Google Map Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.494793618151!2d77.09545041507886!3d28.464673982484435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18c3b7a5a8cd%3A0x2ff7fb16d10c0b31!2sGolf%20Course%20Rd%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1670000000000!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 12. BOOK A FREE VISIT ==================== -->
+  <section class="book-visit-section section-padding" id="book-visit">
+    <div class="container">
+      <div class="visit-form-box reveal-scale">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <span class="section-tag">COMPLIMENTARY PASS</span>
+          <h2 class="section-title">Book A Free Visit</h2>
+          <p class="section-subtitle">
+            Experience our premium equipment and atmosphere firsthand. Reserve your free trial pass below.
+          </p>
+        </div>
+
+        <form id="visit-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="visit-name">Full Name</label>
+              <input type="text" id="visit-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+            </div>
+
+            <div class="form-group">
+              <label for="visit-phone">Phone Number</label>
+              <input type="tel" id="visit-phone" class="form-input" placeholder="+91 98765 00000" required />
+            </div>
+
+            <div class="form-group">
+              <label for="visit-date">Preferred Date</label>
+              <input type="date" id="visit-date" class="form-input" required />
+            </div>
+
+            <div class="form-group">
+              <label for="visit-time">Preferred Time Slot</label>
+              <select id="visit-time" class="form-input" required>
+                <option value="morning">Morning (6:00 AM - 10:00 AM)</option>
+                <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">BOOK MY FREE VISIT</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 13. ABOUT SECTION ==================== -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="about-editorial">
+        <div class="about-content reveal-left">
+          <span class="section-tag">OUR PHILOSOPHY</span>
+          <h3>Where Excellence Meets Discipline</h3>
+          <p>
+            XYZ Gym was founded on a singular conviction: fitness environments should elevate human potential. We designed a sanctuary free of clutter and overcrowded spaces, built around precision biomechanics, world-class certified coaches, and an empowering community.
+          </p>
+          <p>
+            Whether your objective is elite athletic conditioning, body recomposition, or long-term strength, our facility provides the exact tools and support structure to make progress inevitable.
+          </p>
+        </div>
+
+        <div class="about-image-frame reveal-right">
+          <img src="images/training-zone.jpg" alt="XYZ Gym Interior Philosophy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 14. FINAL CALL TO ACTION ==================== -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta-content reveal">
+        <span class="section-tag">TAKE THE NEXT STEP</span>
+        <h2>READY TO LEVEL UP?</h2>
+        <p>Your stronger self starts with one decision. Join today or schedule your free trial visit.</p>
+        
+        <div class="final-cta-buttons">
+          <a href="#memberships" class="btn btn-primary">JOIN NOW</a>
+          <a href="#book-visit" class="btn btn-secondary">BOOK A FREE VISIT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 15. FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">XYZ<span>.</span>GYM</a>
+          <p>
+            Premium fitness & wellness destination. Engineered for those who take physical performance seriously.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#memberships">Memberships</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#nutrition">Nutrition Store</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><a href="mailto:contact@xyzgym.com">contact@xyzgym.com</a></li>
+            <li><a href="#contact">42 Luxury Tower, City</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Social</h4>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 XYZ GYM. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CART DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close-btn" id="cart-close-btn">&times;</button>
+    </div>
+
+    <div class="cart-items-list" id="cart-items-list">
+      <!-- Items dynamically populated via JS -->
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Your cart is currently empty.</p>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Total Amount:</span>
+        <span id="cart-total-price">₹0</span>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkout-btn">PROCEED TO CHECKOUT</button>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast-notification" id="toast-notification">Item added to cart!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
