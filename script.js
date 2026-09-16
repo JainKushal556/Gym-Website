@@ -1,45 +1,37 @@
 /* ============================================================
-   XYZ GYM — Interactive Functionality, E-Commerce & Animations
+   XYZ GYM — Interactions & E-Commerce
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---------- 1. Navbar Sticky & Active Scroll Link ----------
+  // ---------- 1. Navbar Scroll State ----------
   const navbar = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
 
-    // Active link indicator
     let currentSection = '';
-    const scrollPosition = window.scrollY + 120;
+    const scrollPos = window.scrollY + 100;
 
     sections.forEach(section => {
       const top = section.offsetTop;
       const height = section.offsetHeight;
-      if (scrollPosition >= top && scrollPosition < top + height) {
+      if (scrollPos >= top && scrollPos < top + height) {
         currentSection = section.getAttribute('id');
       }
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSection}`) {
-        link.classList.add('active');
-      }
+      link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
     });
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // ---------- 2. Mobile Navigation Drawer ----------
+  // ---------- 2. Mobile Navigation ----------
   const mobileToggle = document.getElementById('mobile-toggle');
   const navMenu = document.getElementById('nav-menu');
 
@@ -55,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---------- 3. Smooth Scroll-Reveal Animations ----------
+  // ---------- 3. Scroll Reveal ----------
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
 
   const revealObserver = new IntersectionObserver(
@@ -63,29 +55,34 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          revealObserver.unobserve(entry.target); // Animate once
+          revealObserver.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px',
     }
   );
 
-  // Group elements inside grids for staggered transition delays
-  const gridContainers = document.querySelectorAll('.pricing-grid, .features-grid, .facilities-grid, .trainers-grid, .results-grid, .testimonials-grid, .product-grid');
-
-  gridContainers.forEach(grid => {
+  // Stagger items inside grids
+  const grids = document.querySelectorAll('.pricing-grid, .trainers-grid, .product-grid');
+  grids.forEach(grid => {
     const items = grid.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-    items.forEach((item, index) => {
-      item.style.transitionDelay = `${(index % 4) * 0.12}s`;
+    items.forEach((item, i) => {
+      item.style.transitionDelay = `${(i % 4) * 0.1}s`;
     });
+  });
+
+  // Stagger why-us items
+  const whyUsItems = document.querySelectorAll('.why-us-item.reveal');
+  whyUsItems.forEach((item, i) => {
+    item.style.transitionDelay = `${i * 0.08}s`;
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // ---------- 4. Store Category Filter Tabs ----------
+  // ---------- 4. Store Category Filter ----------
   const storeTabs = document.querySelectorAll('.store-tab');
   const productCards = document.querySelectorAll('.product-card');
 
@@ -99,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
       productCards.forEach((card, index) => {
         if (category === 'all' || card.getAttribute('data-category') === category) {
           card.style.display = 'flex';
-          card.style.transitionDelay = `${index * 0.08}s`;
-          setTimeout(() => card.classList.add('active'), 50);
+          card.style.transitionDelay = `${index * 0.06}s`;
+          setTimeout(() => card.classList.add('active'), 30);
         } else {
           card.style.display = 'none';
           card.classList.remove('active');
@@ -109,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---------- 5. E-Commerce Cart System ----------
+  // ---------- 5. Cart System ----------
   let cart = [];
 
   const cartBadgeCount = document.getElementById('cart-badge-count');
@@ -139,16 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const showToast = (message) => {
     toastNotification.textContent = message;
     toastNotification.classList.add('active');
-    setTimeout(() => {
-      toastNotification.classList.remove('active');
-    }, 3000);
+    setTimeout(() => toastNotification.classList.remove('active'), 2500);
   };
 
   const updateCartUI = () => {
     cartBadgeCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
 
     if (cart.length === 0) {
-      cartItemsList.innerHTML = '<p style="color: var(--text-muted); font-size: 0.9rem;">Your cart is currently empty.</p>';
+      cartItemsList.innerHTML = '<p style="color: var(--text-muted); font-size: 0.88rem;">Your cart is empty.</p>';
       cartTotalPrice.textContent = '₹0';
       return;
     }
@@ -161,11 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="cart-item">
           <div>
             <div class="cart-item-title">${item.name}</div>
-            <div style="font-size: 0.78rem; color: var(--text-secondary);">Qty: ${item.qty}</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Qty: ${item.qty}</div>
           </div>
           <div style="display: flex; align-items: center; gap: 0.75rem;">
             <span class="cart-item-price">₹${itemTotal.toLocaleString()}</span>
-            <button class="remove-cart-item" data-index="${index}" style="color: #ff4d4d; font-size: 1rem;">&times;</button>
+            <button class="remove-cart-item" data-index="${index}" style="color: #cc4444; font-size: 1rem; cursor: pointer; background: none; border: none;">&times;</button>
           </div>
         </div>
       `;
@@ -173,7 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cartTotalPrice.textContent = `₹${total.toLocaleString()}`;
 
-    // Attach remove handlers
     document.querySelectorAll('.remove-cart-item').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const idx = parseInt(e.target.getAttribute('data-index'), 10);
@@ -183,32 +177,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Add to cart button handler
   document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const name = btn.getAttribute('data-name');
       const price = parseInt(btn.getAttribute('data-price'), 10);
 
-      const existingItem = cart.find(item => item.name === name);
-      if (existingItem) {
-        existingItem.qty += 1;
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.qty += 1;
       } else {
         cart.push({ name, price, qty: 1 });
       }
 
       updateCartUI();
-      showToast(`Added ${name} to cart!`);
+      showToast(`Added ${name} to cart`);
     });
   });
 
-  // Buy Now button handler
   document.querySelectorAll('.buy-now-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const name = btn.getAttribute('data-name');
       const price = parseInt(btn.getAttribute('data-price'), 10);
 
-      const existingItem = cart.find(item => item.name === name);
-      if (!existingItem) {
+      if (!cart.find(item => item.name === name)) {
         cart.push({ name, price, qty: 1 });
       }
 
@@ -217,25 +208,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Checkout button handler
   checkoutBtn.addEventListener('click', () => {
     if (cart.length === 0) {
-      alert('Your cart is empty! Please add products before checking out.');
+      alert('Your cart is empty. Add products before checking out.');
       return;
     }
-    alert('Thank you for your order! Redirecting to secure checkout...');
+    alert('Thank you! Redirecting to secure checkout...');
     cart = [];
     updateCartUI();
     closeCart();
   });
 
-  // ---------- 6. Book Visit Form Handling ----------
+  // ---------- 6. Book Visit Form ----------
   const visitForm = document.getElementById('visit-form');
   if (visitForm) {
     visitForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.getElementById('visit-name').value;
-      alert(`Thank you ${name}! Your free visit pass has been booked. Our team will contact you shortly.`);
+      alert(`Thank you ${name}! Your free visit has been booked. We'll contact you shortly.`);
       visitForm.reset();
     });
   }
